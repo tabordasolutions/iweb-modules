@@ -521,7 +521,7 @@ define([], function() { //Add shape options
 	               label:'Border Patrol',
 	               img:'images/drawmenu/markers/Law_Border_Patrol_S1.png'
 	           },
-	           {  
+	           {
 	               label:'Customs Service',
 	               img:'images/drawmenu/markers/Law_Customs_Service_S1.png'
 	           },
@@ -560,7 +560,1010 @@ define([], function() { //Add shape options
 	           {  
 	               label:'US Marshals Service',
 	               img:'images/drawmenu/markers/Law_US_Marshall_S1.png'
-	           }
+	           },
+                {
+                    img: 'images/drawmenu/markers/incident/natural_hazards/Avalanche.png',
+                    label: 'Avalanche'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/natural_hazards/Earthquake.png',
+                    label: 'Earthquake'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/natural_hazards/Flood.png',
+                    label: 'Flood'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/natural_hazards/Hurricane.png',
+                    label: 'Hurricane'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/natural_hazards/Landslide.png',
+                    label: 'Landslide'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/natural_hazards/Snow-Event.png',
+                    label: 'Snow Event'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/natural_hazards/Tornado.png',
+                    label: 'Tornado'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/natural_hazards/Volcano.png',
+                    label: 'Volcano'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/natural_hazards/Windstorm.png',
+                    label: 'Windstorm'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/human_caused_hazards/Explosion.png',
+                    label: 'Explosion'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/human_caused_hazards/Fire-Commercial.png',
+                    label: 'Fire Commercial'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/human_caused_hazards/Fire-Forest.png',
+                    label: 'Fire Forest'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/human_caused_hazards/Fire-House.png',
+                    label: 'Fire House'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/human_caused_hazards/Fire-Industrial.png',
+                    label: 'Fire Industrial'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/human_caused_hazards/Fire-Other.png',
+                    label: 'Fire Other'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/human_caused_hazards/Fire-School.png',
+                    label: 'Fire School'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/human_caused_hazards/HazMat-Release.png',
+                    label: 'HazMat Release'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/human_caused_hazards/Other.png',
+                    label: 'Other'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/human_caused_hazards/Radiological-General.png',
+                    label: 'Radiological General'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/human_caused_hazards/Radiological-Nuclear-Power.png',
+                    label: 'Radiological Nuclear Power'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/human_caused_hazards/Structural-Collapse.png',
+                    label: 'Structural Collapse'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/Datum_Finish.png',
+                    label: 'Datum Finish'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/Datum_Start.png',
+                    label: 'Datum Start'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/IRDownlink.png',
+                    label: 'IRDownlink'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/Lookout.png',
+                    label: 'Lookout'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/GENRIC_Datum.png',
+                    label: 'GENRIC Datum'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/CLUE_Relevant_Known.png',
+                    label: 'CLUE Relevant Known'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/CLUE_Relevant_Not.png',
+                    label: 'CLUE Relevant Not'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/CLUE_Relevant_Unknown.png',
+                    label: 'CLUE Relevant Unknown'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/LEVEL1_Cell-Phone.png',
+                    label: 'LEVEL1 Cell Phone'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/LEVEL1_Emergency-Locating-Transmitter.png',
+                    label: 'LEVEL1 Emergency Locating Transmitter'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/LEVEL1_Portable-Locating-Transmitter.png',
+                    label: 'LEVEL1 Portable Locating Transmitter'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/LEVEL2_Cell-Phone.png',
+                    label: 'LEVEL2 Cell Phone'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/LEVEL2_Emergency-Locating-Transmitter.png',
+                    label: 'LEVEL2 Emergency Locating Transmitter'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/LEVEL2_Portable-Locating-Transmitter.png',
+                    label: 'LEVEL2 Portable Locating Transmitter'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/LEVEL3_Cell-Phone.png',
+                    label: 'LEVEL3 Cell Phone'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/LEVEL3_Emergency-Locating-Transmitter.png',
+                    label: 'LEVEL3 Emergency Locating Transmitter'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/LEVEL3_Portable-Locating-Transmitter.png',
+                    label: 'LEVEL3 Portable Locating Transmitter'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/LEVEL4_Cell-Phone.png',
+                    label: 'LEVEL4 Cell Phone'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/LEVEL4_Emergency-Locating-Transmitter.png',
+                    label: 'LEVEL4 Emergency Locating Transmitter'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/LEVEL4_Portable-Locating-Transmitter.png',
+                    label: 'LEVEL4 Portable Locating Transmitter'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/Communication-Ops-Generic.png',
+                    label: 'Communication Ops Generic'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/Communication-Ops-Repeater.png',
+                    label: 'Communication Ops Repeater'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/Communication-Ops-Telephone.png',
+                    label: 'Communication Ops Telephone'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/Reporting-Party.png',
+                    label: 'Reporting Party / CLUE Reporting Party'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/Sensor-Biological.png',
+                    label: 'Sensor Biological'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/Sensor-Chemical.png',
+                    label: 'Sensor Chemical'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/Sensor-General.png',
+                    label: 'Sensor General'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/Sensor-Intruderl.png',
+                    label: 'Sensor Intruderl'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/Sensor-Radiological.png',
+                    label: 'Sensor Radiological'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_intelligence/Sensor-Weather.png',
+                    label: 'Sensor Weather'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Absorbtion.png',
+                    label: 'Absorbtion'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Area-Command-Post.png',
+                    label: 'Area Command Post'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Command-Post-Plain.png',
+                    label: 'Command Post Plain'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Command-Post.png',
+                    label: 'Command Post'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Emergency-Operations-Cetner.png',
+                    label: 'Emergency Operations Cetner'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Incident-Command-Post.png',
+                    label: 'Incident Command Post'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Joint-Operations-Center.png',
+                    label: 'Joint Operations Center'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Multi-Agency-Coordination-Center.png',
+                    label: 'Multi Agency Coordination Center'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Dam.png',
+                    label: 'Dam'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Decon.png',
+                    label: 'Decon'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Decon_Ambulatory.png',
+                    label: 'Decon Ambulatory'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Decon_NonAmbulatory.png',
+                    label: 'Decon NonAmbulatory'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Dike.png',
+                    label: 'Dike'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Diversion.png',
+                    label: 'Diversion'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Foam.png',
+                    label: 'Foam'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Barrier-Emergency-Access-Only.png',
+                    label: 'Barrier Emergency Access Only'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Barrier-With-Security.png',
+                    label: 'Barrier With Security'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Barrier-With-Checkpoint.png',
+                    label: 'Barrier With Checkpoint'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Bomb-Containment.png',
+                    label: 'Bomb Containment'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Bomb-Detonation-Location.png',
+                    label: 'Bomb Detonation Location'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Civilian-Staging-Animal-Reunification.png',
+                    label: 'Civilian Staging Animal Reunification'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Civilian-Staging-Family-Reunification.png',
+                    label: 'Civilian Staging Family Reunification'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Civilian-Staging-Transit.png',
+                    label: 'Civilian Staging Transit'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Civilian-Staging-Volunteer.png',
+                    label: 'Civilian Staging Volunteer'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/EMS-ALS.png',
+                    label: 'EMS ALS'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/EMS-BLS.png',
+                    label: 'EMS BLS'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/EMS-ILS.png',
+                    label: 'EMS ILS'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/EMS-Treatment-Plain.png',
+                    label: 'EMS Treatment Plain'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/LZ-Helibase.png',
+                    label: 'LZ Helibase'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/LZ-Marine-Dock.png',
+                    label: 'LZ Marine Dock'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/LZ-Marine-LZ.png',
+                    label: 'LZ Marine LZ'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/LZ-Marine-Launch-Site.png',
+                    label: 'LZ Marine Launch Site'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/LZ_Airport.png',
+                    label: 'LZ Airport'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Medical-Supply-Cache.png',
+                    label: 'Medical Supply Cache'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Public_Information_Media.png',
+                    label: 'Public Information Media'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/SWAT-Rehearsal-Area.png',
+                    label: 'SWAT Rehearsal Area'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/SWAT-Sniper-Location.png',
+                    label: 'SWAT Sniper Location'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/SWAT-Standoff-Location.png',
+                    label: 'SWAT Standoff Location'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/SWAT_Canine.png',
+                    label: 'SWAT Canine'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/SWAT_EMT.png',
+                    label: 'SWAT EMT'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/SWAT_Hostage_Negotation.png',
+                    label: 'SWAT Hostage Negotation'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/SWAT_RallyPoint.png',
+                    label: 'SWAT RallyPoint'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Staging_Air.png',
+                    label: 'Staging Air'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Staging_CISM.png',
+                    label: 'Staging CISM'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Staging_EMS.png',
+                    label: 'Staging EMS'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Staging_Equiment.png',
+                    label: 'Staging Equiment'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Staging_Faith.png',
+                    label: 'Staging Faith'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Staging_Fire.png',
+                    label: 'Staging Fire'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Staging_Law_Enforcement.png',
+                    label: 'Staging Law Enforcement'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Staging_Priority1.png',
+                    label: 'Staging Priority1'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Staging_Priority2.png',
+                    label: 'Staging Priority2'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Staging_Rehab.png',
+                    label: 'Staging Rehab'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Water-Fire-Hydrant.png',
+                    label: 'Water Fire Hydrant'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Water-Point-Helicopter.png',
+                    label: 'Water Point Helicopter'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Water-Point-Retardent.png',
+                    label: 'Water Point Retardent'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Water-Point-Vehicle.png',
+                    label: 'Water Point Vehicle'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Barrier.png',
+                    label: 'Barrier'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Base.png',
+                    label: 'Base'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Camp.png',
+                    label: 'Camp'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Civilian-Staging-Not-Specfic.png',
+                    label: 'Civilian Staging Not Specfic'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/EMS-Plain.png',
+                    label: 'EMS Plain'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Responder_First_Aid.png',
+                    label: 'Responder First Aid'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/SWAT.png',
+                    label: 'SWAT'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Staging.png',
+                    label: 'Staging'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Water-Point-General.png',
+                    label: 'Water Point General'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/EMS-Casuality-Collection-Point.png',
+                    label: 'EMS Casuality Collection Point'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/EMS-Triage.png',
+                    label: 'EMS Triage'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Public_Information.png',
+                    label: 'Public Information'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Communication-Ops-Generic.png',
+                    label: 'Communication Ops Generic'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Communication-Ops-Repeater.png',
+                    label: 'Communication Ops Repeater'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Communication-Ops-Telephone.png',
+                    label: 'Communication Ops Telephone'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Simple-EMS-Treatment-Plain.png',
+                    label: 'Simple EMS Treatment Plain'
+                },
+                {
+                    img: 'images/drawmenu/markers/incident/incident_resources/Detail-EMS-Treatment-Plain.png',
+                    label: 'Detail EMS Treatment Plain'
+                }
+	       ],
+	       "Hazard": [
+                {
+                    label: 'HAZARD ACCESS Apparatus Ambulance',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Apparatus-Ambulance.png'
+                },                 {
+                    label: 'HAZARD ACCESS Apparatus Fire Engine',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Apparatus-Fire-Engine.png'
+                },                 {
+                    label: 'HAZARD ACCESS Apparatus No Fire Engine',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Apparatus-No-Fire-Engine.png'
+                },                 {
+                    label: 'HAZARD ACCESS BLOCKED No Access',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/BLOCKED-No-Access.png'
+                },                 {
+                    label: 'HAZARD ACCESS BLOCKED Road',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/BLOCKED-Road.png'
+                },                 {
+                    label: 'HAZARD ACCESS BRIDGE Do Not Cross',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/BRIDGE-Do-Not-Cross.png'
+                },                 {
+                    label: 'HAZARD ACCESS Clearance Low Height No Access Fire Engine',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Clearance-Low-Height-No-Access-Fire-Engine.png'
+                },                 {
+                    label: 'HAZARD ACCESS Clearance Low Height No Access',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Clearance-Low-Height-No-Access.png'
+                },                 {
+                    label: 'HAZARD ACCESS Clearance Low Height',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Clearance-Low-Height.png'
+                },                 {
+                    label: 'HAZARD ACCESS Clearance Narrow No Access Fire Engine',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Clearance-Narrow-No-Access-Fire-Engine.png'
+                },                 {
+                    label: 'HAZARD ACCESS Clearance Narrow No Access',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Clearance-Narrow-No-Access.png'
+                },                 {
+                    label: 'HAZARD ACCESS Clearance Narrow',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Clearance-Narrow.png'
+                },
+                {
+                    label: 'HAZARD ACCESS NO Ladder Truck or Semi Truck Access',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/NO-Ladder-Truck-or-Semi-Truck-Access.png'
+                },                 {
+                    label: 'HAZARD ACCESS NO Turnaround Ambulance',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/NO-Turnaround-Ambulance.png'
+                },                 {
+                    label: 'HAZARD ACCESS NO Turnaround Fire Engine',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/NO-Turnaround-Fire-Engine.png'
+                },
+                {
+                    label: 'HAZARD ACCESS NO Turnaround Ladder Truck or Semi Truck',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/NO-Turnaround-Ladder-Truck-or-Semi-Truck.png'
+                },                 {
+                    label: 'HAZARD ACCESS NO Turnaround Vehicle General',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/NO-Turnaround-Vehicle-General.png'
+                },                 {
+                    label: 'HAZARD ACCESS NO Turnaround',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/NO-Turnaround.png'
+                },
+                {
+                    label: 'HAZARD ACCESS NO Vehicle Access',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/NO-Vehicle-Access.png'
+                },                 {
+                    label: 'HAZARD ACCESS NO Vertical Ladder Access',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/NO-Vertical-Ladder-Access.png'
+                },                 {
+                    label: 'HAZARD ACCESS Poor Access Vehicle General',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Poor-Access-Vehicle-General.png'
+                },                 {
+                    label: 'HAZARD ACCESS Restricted Weight',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Restricted-Weight.png'
+                },                 {
+                    label: 'HAZARD ACCESS Road Access Vehicle General',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Road-Access-Vehicle-General.png'
+                },                 {
+                    label: 'SHAZARD ACCESS teep Access Difficult',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Steep-Access-Difficult.png'
+                },                 {
+                    label: 'HAZARD ACCESS Steep Access Easy',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Steep-Access-Easy.png'
+                },                 {
+                    label: 'HAZARD ACCESS Steep Access Extreme',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Steep-Access-Extreme.png'
+                },                 {
+                    label: 'HAZARD ACCESS Steep Access General',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Steep-Access-General.png'
+                },                 {
+                    label: 'HAZARD ACCESS Steep Access Moderate',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Steep-Access-Moderate.png'
+                },                 {
+                    label: 'HAZARD ACCESS Steep Access Vehicle General',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Steep-Access-Vehicle-General.png'
+                },                 {
+                    label: 'HAZARD ACCESS Traffic Calming Bumps',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Traffic-Calming-Bumps.png'
+                },                 {
+                    label: 'HAZARD ACCESS Traffic Calming Humps',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Traffic-Calming-Humps.png'
+                },                 {
+                    label: 'HAZARD ACCESS Traffic Calming Traffic Circles',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Traffic-Calming-Traffic-Circles.png'
+                },                 {
+                    label: 'HAZARD ACCESS Turnarounds Freeway',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Turnarounds-Freeway.png'
+                },                 {
+                    label: 'HAZARD ACCESS Turnarounds Roadway',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Turnarounds-Roadway.png'
+                },                 {
+                    label: 'HAZARD ACCESS Turnarounds',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Turnarounds.png'
+                },
+                {
+                    label: 'HAZARD ACCESS Vertical Ladder Access',
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Vertical-Ladder-Access.png'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Emergency-Access-Ambulance-Access.png',
+                    label: 'HAZARD ACCESS Emergency Access Ambulance Access'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Emergency-Access-Ladder-Truck-Access.png',
+                    label: 'HAZARD ACCESS Emergency Access Ladder Truck Access'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Emergency-Access-Pumper-Access.png',
+                    label: 'HAZARD ACCESS Emergency Access Pumper Access'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Emergency-Access-Small-Vehicle.png',
+                    label: 'HAZARD ACCESS Emergency Access Small Vehicle'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Emergency-Access-Tram-or-Vertical-Lift.png',
+                    label: 'HAZARD ACCESS Emergency Access Tram or Vertical Lift'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Emergency-Access-Walking-Access-Only.png',
+                    label: 'HAZARD ACCESS Emergency Access Walking Access Only'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Emergency-Access-Water-Access.png',
+                    label: 'HAZARD ACCESS Emergency Access Water Access'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Emergency-Personel-Access-Fire-Department-Access.png',
+                    label: 'HAZARD ACCESS Emergency Personel Access Fire Department Access'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Emergency-Personel-Access-PD-Access.png',
+                    label: 'HAZARD ACCESS Emergency Personel Access PD Access'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Emergency-Personel-Access-PW-Access.png',
+                    label: 'HAZARD ACCESS Emergency Personel Access PW Access'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Emergency-Personel-Access-Trail-Access.png',
+                    label: 'HAZARD ACCESS Emergency Personel Access Trail Access'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazard_access/Vehicle-Parking.png',
+                    label: 'HAZARD ACCESS Vehicle Parking'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/HazMat-Tank-Horizontal.png',
+                    label: 'HazMat Tank Horizontal'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/HazMat-Tank-Underground.png',
+                    label: 'HazMat Tank Underground'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/HazMat-Tank-Vertical.png',
+                    label: 'HazMat Tank Vertical'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Aerial-Hazard.png',
+                    label: 'Hazard Fire Aerial Hazard'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Biohazard.png',
+                    label: 'Hazard Fire Biohazard'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Bowstrin-Truss.png',
+                    label: 'Hazard Fire Bowstrin Truss'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Building-Over-Nextto-Water.png',
+                    label: 'Hazard Fire Building Over Nextto Water'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Close-Exposure.png',
+                    label: 'Hazard Fire Close Exposure'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Collapse-Likely.png',
+                    label: 'Hazard Fire Collapse Likely'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Common-Attic.png',
+                    label: 'Hazard Fire Common Attic'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Confined-Space.png',
+                    label: 'Hazard Fire Confined Space'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-DO-NOT-ENTER-Building.png',
+                    label: 'Hazard Fire DO NOT ENTER Building'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-DO-NOT-USE-Water.png',
+                    label: 'Hazard Fire DO NOT USE Water'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Electical-Hazards.png',
+                    label: 'Hazard Fire Electical Hazards'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Evaucation-Hazards.png',
+                    label: 'Hazard Fire Evaucation Hazards'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Fall-Hazards.png',
+                    label: 'Hazard Fire Fall Hazards'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-General-Hazards.png',
+                    label: 'Hazard Fire General Hazards'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Hazardous-Entry-Violent.png',
+                    label: 'Hazard Fire Hazardous Entry Violent'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Hazardous-Entry.png',
+                    label: 'Hazard Fire Hazardous Entry'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Hazardous-Shaft.png',
+                    label: 'Hazard Fire Hazardous Shaft'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Hazardous-Voids.png',
+                    label: 'Hazard Fire Hazardous Voids'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-High-Fire-Load.png',
+                    label: 'Hazard Fire High Fire Load'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-High-Occupancy-Load.png',
+                    label: 'Hazard Fire High Occupancy Load'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-High-Pile-Storage.png',
+                    label: 'Hazard Fire High Pile Storage'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Lightweight-Floor.png',
+                    label: 'Hazard Fire Lightweight Floor'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Lightweight-Roof.png',
+                    label: 'Hazard Fire Lightweight Roof'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Magnetic-Hazards.png',
+                    label: 'Hazard Fire Magnetic Hazards'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-ManTrap-or-Entrapment.png',
+                    label: 'Hazard Fire ManTrap or Entrapment'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-No-Roof-Operations.png',
+                    label: 'Hazard Fire No Roof Operations'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-No-Water-Supply.png',
+                    label: 'Hazard Fire No Water Supply'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Not-Occupied-or-Abandoned.png',
+                    label: 'Hazard Fire Not Occupied or Abandoned'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Poison.png',
+                    label: 'Hazard Fire Poison'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Poor-or-No-Radio-Reception.png',
+                    label: 'Hazard Fire Poor or No Radio Reception'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Powerline-Above.png',
+                    label: 'Hazard Fire Powerline Above'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Radioactive.png',
+                    label: 'Hazard Fire Radioactive'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Saferty-Zone-Gun-Cover.png',
+                    label: 'Hazard Fire Saferty Zone Gun Cover'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Slip-Hazards.png',
+                    label: 'Hazard Fire Slip Hazards'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Soft-Soil.png',
+                    label: 'Hazard Fire Soft Soil'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Truss-General.png',
+                    label: 'Hazard Fire Truss General'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Truss-Metal.png',
+                    label: 'Hazard Fire Truss Metal'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Truss-Wood-I-Beam.png',
+                    label: 'Hazard Fire Truss Wood I Beam'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/Hazard-Fire-Truss-Wood.png',
+                    label: 'Hazard Fire Truss Wood'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-1-Blasting-Agent-15.png',
+                    label: 'HazMat DOT Placarding Class 1 Blasting Agent 15'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-1-Explosives-11.png',
+                    label: 'HazMat DOT Placarding Class 1 Explosives 11'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-1-Explosives-12.png',
+                    label: 'HazMat DOT Placarding Class 1 Explosives 12'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-1-Explosives-13.png',
+                    label: 'HazMat DOT Placarding Class 1 Explosives 13'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-1-Explosives-14.png',
+                    label: 'HazMat DOT Placarding Class 1 Explosives 14'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-1-Explosives-15.png',
+                    label: 'HazMat DOT Placarding Class 1 Explosives 15'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-1-Explosives-16.png',
+                    label: 'HazMat DOT Placarding Class 1 Explosives 16'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-1-Explosives.png',
+                    label: 'HazMat DOT Placarding Class 1 Explosives'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-2-Chlorine.png',
+                    label: 'HazMat DOT Placarding Class 2 Chlorine'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-2-Flammable-Gas-21.png',
+                    label: 'HazMat DOT Placarding Class 2 Flammable Gas 21'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-2-Flammable-Gas.png',
+                    label: 'HazMat DOT Placarding Class 2 Flammable Gas'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-2-Flammable-Liquid.png',
+                    label: 'HazMat DOT Placarding Class 2 Flammable Liquid'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-2-Flammable-Solid.png',
+                    label: 'HazMat DOT Placarding Class 2 Flammable Solid'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-2-Inhalation-Hazards-23.png',
+                    label: 'HazMat DOT Placarding Class 2 Inhalation Hazards 23'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-2-Non-Flammable-Gas-22.png',
+                    label: 'HazMat DOT Placarding Class 2 Non Flammable Gas 22'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-2-Oxygen-22.png',
+                    label: 'HazMat DOT Placarding Class 2 Oxygen 22'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-3-Combustible.png',
+                    label: 'HazMat DOT Placarding Class 3 Combustible'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-3-Flammable.png',
+                    label: 'HazMat DOT Placarding Class 3 Flammable'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-3-Fuel-Oil.png',
+                    label: 'HazMat DOT Placarding Class 3 Fuel Oil'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-3-Gasoline.png',
+                    label: 'HazMat DOT Placarding Class 3 Gasoline'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-4-Dangerous-When-Wet.png',
+                    label: 'HazMat DOT Placarding Class 4 Dangerous When Wet'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-4-Flammable-Solids.png',
+                    label: 'HazMat DOT Placarding Class 4 Flammable Solids'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-4-Spontaneously-Combustible.png',
+                    label: 'HazMat DOT Placarding Class 4 Spontaneously Combustible'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-5-Organic-Peroxides-51.png',
+                    label: 'HazMat DOT Placarding Class 5 Organic Peroxides 51'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-5-Organic-Peroxides-52.png',
+                    label: 'HazMat DOT Placarding Class 5 Organic Peroxides 52'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-5-Oxidizers-51.png',
+                    label: 'HazMat DOT Placarding Class 5 Oxidizers 51'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-6-Infectious.png',
+                    label: 'HazMat DOT Placarding Class 6 Infectious'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-6-Inhalation-Hazards.png',
+                    label: 'HazMat DOT Placarding Class 6 Inhalation Hazards'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-6-Poison-Gas.png',
+                    label: 'HazMat DOT Placarding Class 6 Poison Gas'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-6-Poisons.png',
+                    label: 'HazMat DOT Placarding Class 6 Poisons'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-6-Toxic-Gas.png',
+                    label: 'HazMat DOT Placarding Class 6 Toxic Gas'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-6-Toxic.png',
+                    label: 'HazMat DOT Placarding Class 6 Toxic'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-7-Radioactive.png',
+                    label: 'HazMat DOT Placarding Class 7 Radioactive'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-8-Acids.png',
+                    label: 'HazMat DOT Placarding Class 8 Acids'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-8-Alkaline.png',
+                    label: 'HazMat DOT Placarding Class 8 Alkaline'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-8-Corrosive.png',
+                    label: 'HazMat DOT Placarding Class 8 Corrosive'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-9.png',
+                    label: 'HazMat DOT Placarding Class 9'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-Other-DANGEROUS.png',
+                    label: 'HazMat DOT Placarding Class Other DANGEROUS'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-Other-HOT.png',
+                    label: 'HazMat DOT Placarding Class Other HOT'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-Other-Store-Away-From-Food.png',
+                    label: 'HazMat DOT Placarding Class Other Store Away From Food'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-Other-V2.png',
+                    label: 'HazMat DOT Placarding Class Other V2'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-Other-V3.png',
+                    label: 'HazMat DOT Placarding Class Other V3'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HazMat-DOT-Placarding-Class-Other.png',
+                    label: 'HazMat DOT Placarding Class Other'
+                },
+                {
+                    img: 'images/drawmenu/markers/hazard/hazardous_materials/HAZARD_NFPA74_MLTCLR_SOLID_DETAIL_.png',
+                    label: 'HAZARD NFPA74 MLTCLR SOLID DETAIL'
+                }
 	       ],
 	       'CST':[  
 	           {  
@@ -733,7 +1736,7 @@ define([], function() { //Add shape options
 	           },
 	           {  
 	               img:'images/drawmenu/markers/hsi/Incidents/Hazmat_Radioactive_Material_ch.png',
-	               label:'Radioactive Maerial'
+	               label:'Radioactive Material'
 	           },
 	           {  
 	               img:'images/drawmenu/markers/hsi/Incidents/Hazmat_Spontaneously_Combustible.png',
@@ -946,7 +1949,231 @@ define([], function() { //Add shape options
 	           {  
 	               img:'images/drawmenu/markers/hsi/NaturalEvents/Infestation_Insect.png',
 	               label:'Insect Infestation'
-	           }
+	           },
+                {
+                    img: 'images/drawmenu/markers/cst/agriculture/Animal-Aquaculture-Facilities.png',
+                    label: 'Animal Aquaculture Facilities'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/agriculture/Animal-Slaughtering-and-Processing-Facilities.png',
+                    label: 'Animal Slaughtering and Processing Facilities'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/agriculture/Beef-Cattle-Ranches-and-Farms.png',
+                    label: 'Beef Cattle Ranches and Farms'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/agriculture/Botanical-and-Zoological-Gardens.png',
+                    label: 'Botanical and Zoological Gardens'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/agriculture/Cattle-Feedlots.png',
+                    label: 'Cattle Feedlots'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/agriculture/Dairy-Cattle-Farms.png',
+                    label: 'Dairy Cattle Farms'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/agriculture/Fruit-and-Tree-Nut-Farms.png',
+                    label: 'Fruit and Tree Nut Farms'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/agriculture/Greenhouse-Nursery-and-Floriculture-Production-Facilities.png',
+                    label: 'Greenhouse Nursery and Floriculture Production Facilities'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/agriculture/Hog-and-Pig-Farms.png',
+                    label: 'Hog and Pig Farms'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/agriculture/Hunting-Trapping-and-Game-Propagation-Facilities.png',
+                    label: 'Hunting Trapping and Game Propagation Facilities'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/agriculture/Oilseed-and-Grain-Farms.png',
+                    label: 'Oilseed and Grain Farms'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/agriculture/Other-Crop-Farms.png',
+                    label: 'Other Crop Farms'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/agriculture/Poultry-Slaughtering-and-Processing-Facilities.png',
+                    label: 'Poultry Slaughtering and Processing Facilities'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/agriculture/Poultry-and-Egg-Production-Farms.png',
+                    label: 'Poultry and Egg Production Farms'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/agriculture/State-Fairgrounds.png',
+                    label: 'State Fairgrounds'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/agriculture/Vegetable-and-Melon-Farms.png',
+                    label: 'Vegetable and Melon Farms'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/agriculture/Barn.png',
+                    label: 'Barn'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/borders/Canada-and-Mexico-Border-Crossings.png',
+                    label: 'Canada and Mexico Border Crossings'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/borders/US-Ports-of-Entry.png',
+                    label: 'US Ports of Entry'
+                },
+               {
+                    img: 'images/drawmenu/markers/cst/chemical/Biological-Products-Manufacturing-Facilities.png',
+                    label: 'Biological Products Manufacturing Facilities'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/chemical/Chemical-Manufacturing-Facilities.png',
+                    label: 'Chemical Manufacturing Facilities'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/chemical/Environmental-Protection-Agency-Facility-Registry-Service-Emergency-Response-Comprehensive-Env.png',
+                    label: 'Environmental Protection Agency Facility Registry Service Emergency Response Comprehensive Env'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/chemical/Explosives-Manufacturing-Facilities.png',
+                    label: 'Explosives Manufacturing Facilities'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/chemical/Hazardous-Manufacturing.png',
+                    label: 'Hazardous Manufacturing'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/chemical/Nitrogenous-Fertilizer-Plants.png',
+                    label: 'Nitrogenous Fertilizer Plants'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/chemical/Pharmaceutical-Preparation-Manufacturing-Facilities.png',
+                    label: 'Pharmaceutical Preparation Manufacturing Facilities'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/chemical/Phosphatic-Fertilizer-Plants.png',
+                    label: 'Phosphatic Fertilizer Plants'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/chemical/Solid-Waste-Landfill-Facilities-V2.png',
+                    label: 'Solid Waste Landfill Facilities V2'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/chemical/Solid-Waste-Landfill-Facilities-V3.png',
+                    label: 'Solid Waste Landfill Facilities V3'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/chemical/Solid-Waste-Landfill-Facilities.png',
+                    label: 'Solid Waste Landfill Facilities'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/commercial/Book-Store.png',
+                    label: 'Book Store'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/commercial/Cart.png',
+                    label: 'Cart'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/commercial/Clothing-Store.png',
+                    label: 'Clothing Store'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/commercial/Convenience-Store.png',
+                    label: 'Convenience Store'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/commercial/Electronics-Store.png',
+                    label: 'Electronics Store'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/commercial/Generic-Store-.png',
+                    label: 'Generic Store '
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/commercial/Grocery-Store.png',
+                    label: 'Grocery Store'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/commercial/Home-Improvement-and-Hardware-Store.png',
+                    label: 'Home Improvement and Hardware Store'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/commercial/Hotel-Motel.png',
+                    label: 'Hotel Motel'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/commercial/Mall-and-Shopping-Centers.png',
+                    label: 'Mall and Shopping Centers'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/commercial/Office-Supply-and-Service-Store.png',
+                    label: 'Office Supply and Service Store'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/commercial/Pharmacies.png',
+                    label: 'Pharmacies'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/commercial/Sporting-Goods-Store.png',
+                    label: 'Sporting Goods Store'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/commercial/Store.png',
+                    label: 'Store'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/communications/AM-Transmission-Towers.png',
+                    label: 'AM Transmission Towers'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/communications/Cellular-Towers.png',
+                    label: 'Cellular Towers'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/communications/FM-Transmission-Towers.png',
+                    label: 'FM Transmission Towers'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/communications/Land-Mobile-Broadcast-Towers.png',
+                    label: 'Land Mobile Broadcast Towers'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/communications/Land-Mobile-Commercial-Transmission-Towers.png',
+                    label: 'Land Mobile Commercial Transmission Towers'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/communications/Land-Mobile-Private-Transmission-Towers.png',
+                    label: 'Land Mobile Private Transmission Towers'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/communications/Microwave-Service-Towers.png',
+                    label: 'Microwave Service Towers'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/communications/Paging-Transmission-Towers.png',
+                    label: 'Paging Transmission Towers'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/communications/Television-Transmission-Station-Analog.png',
+                    label: 'Television Transmission Station Analog'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/communications/Television-Transmission-Station-Digital.png',
+                    label: 'Television Transmission Station Digital'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/communications/Transmission-Tower.png',
+                    label: 'Transmission Tower'
+                },
+                {
+                    img: 'images/drawmenu/markers/cst/communications/Transmission-Towers-Mobile.png',
+                    label: 'Transmission Towers Mobile'
+                }
 	       ],
 	       'Friendly Unit':[  
 	           {  
