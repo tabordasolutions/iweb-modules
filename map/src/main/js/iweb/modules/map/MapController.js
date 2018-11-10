@@ -278,7 +278,7 @@ define(["iweb/CoreModule", "ol", "./MapStyle", "./FilteredCollection"],
 	};
 
 	MapController.prototype.reloadLayerOnNewToken = function(event, params) {
-		this.reloadLayer(params[0], params[1]);
+		this.reloadLayer(params.layer, params.token);
 	};
 	
 	MapController.prototype.reloadLayer = function(layer, token){
