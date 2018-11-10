@@ -103,6 +103,7 @@ define(["iweb/CoreModule", "ol", "./MapStyle", "./FilteredCollection"],
 
 		drawingSource.on('addfeature', this.drawingSourceAdd, this);
 		drawingSource.on('removefeature', this.drawingSourceRemove, this);
+		Core.EventManager.addListener("reload.layer.on.new.token", this.reloadLayerOnNewToken.bind(this));
 	};
 
 	MapController.prototype.setBaseLayer = function(layer){
@@ -275,8 +276,12 @@ define(["iweb/CoreModule", "ol", "./MapStyle", "./FilteredCollection"],
 	MapController.prototype.getMap = function(){
 		return this.view.map;
 	};
+
+	MapController.prototype.reloadLayerOnNewToken = function(event, params) {
+		this.reloadLayer(params[0], params[1]);
+	};
 	
-	MapController.prototype.reloadLayer = function(layer){
+	MapController.prototype.reloadLayer = function(layer, token){
 		if(layer){
 			var source = layer.getSource();
 
@@ -289,6 +294,9 @@ define(["iweb/CoreModule", "ol", "./MapStyle", "./FilteredCollection"],
 				var params = source.getParams();
 				if(!params){ params = {}; }
 				params.updated = (new Date()).getTime();
+				if(token) {
+					params.token = token;
+				}
 				source.updateParams(params);
 				if(params.LAYERS && 
 						params.LAYERS.indexOf("show") > -1){ //Refresh ArcGis differently
