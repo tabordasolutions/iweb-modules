@@ -239,8 +239,10 @@
                 partialMessage: "",
                 errorHandled: false,
                 closedByClientTimeout: false,
-                ffTryingReconnect: false
-            };
+                ffTryingReconnect: false,
+                messageReason: '',
+                messageCode: ''
+           };
 
             /**
              * {websocket} Opened web socket.
@@ -1522,13 +1524,15 @@
                         return;
                     }
 
+                    _response.messageReason = reason;
+                    _response.messageCode = message.code;
                     _invokeClose(webSocketOpened);
 
                     _response.state = 'closed';
 
                     if (_abortingConnection) {
                         atmosphere.util.log(_request.logLevel, ["Websocket closed normally"]);
-                    } else if (!webSocketOpened) {
+                    } else if (!webSocketOpened && _response.transport === 'websocket' && _request.fallbackTransport !== 'websocket') {
                         _reconnectWithFallbackTransport("Websocket failed on first connection attempt. Downgrading to " + _request.fallbackTransport + " and resending");
 
                     } else if (_request.reconnect && _response.transport === 'websocket' ) {
@@ -1729,11 +1733,12 @@
                     atmosphere.util.onTransportFailure(errorMessage, _request);
                 }
 
-                _request.transport = _request.fallbackTransport;
                 var reconnectInterval = _request.connectTimeout === -1 ? 0 : _request.connectTimeout;
                 if (_request.reconnect && _request.transport !== 'none' || _request.transport == null) {
+                    _request.transport = _request.fallbackTransport;
                     _request.method = _request.fallbackMethod;
                     _response.transport = _request.fallbackTransport;
+                    _response.state = '';
                     _request.fallbackTransport = 'none';
                     if (reconnectInterval > 0) {
                         _request.reconnectId = setTimeout(function () {

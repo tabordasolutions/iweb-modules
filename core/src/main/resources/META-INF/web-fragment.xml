@@ -31,24 +31,24 @@
 
 -->
 <web-fragment version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+			  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 
 	<servlet>
 		<description>AtmosphereServlet</description>
 		<servlet-name>AtmosphereServlet</servlet-name>
 		<servlet-class>org.atmosphere.cpr.AtmosphereServlet</servlet-class>
 		<init-param>
-		    <param-name>org.atmosphere.websocket.bufferSize</param-name>
-		    <param-value>112400</param-value>
+			<param-name>org.atmosphere.websocket.bufferSize</param-name>
+			<param-value>112400</param-value>
 		</init-param>
 		<init-param>
-		    <param-name>org.atmosphere.websocket.maxTextMessageSize</param-name>
-		    <param-value>112400</param-value>
+			<param-name>org.atmosphere.websocket.maxTextMessageSize</param-name>
+			<param-value>112400</param-value>
 		</init-param>
 		<init-param>
-		    <param-name>org.atmosphere.websocket.maxBinaryMessageSize</param-name>
-		    <param-value>112400</param-value>
+			<param-name>org.atmosphere.websocket.maxBinaryMessageSize</param-name>
+			<param-value>112400</param-value>
 		</init-param>
 		<init-param>
 			<param-name>org.atmosphere.websocket.maxIdleTime</param-name>
@@ -57,12 +57,31 @@
 		<!-- Try not to close connection if user gets disconnected for a day -->
 		<init-param>
 			<param-name>org.atmosphere.cpr.CometSupport.maxInactiveActivity</param-name>
-			<param-value>86400000</param-value>
+			<param-value>20000</param-value>
 		</init-param>
 		<init-param>
 			<param-name>org.atmosphere.cpr.AtmosphereFramework.analytics</param-name>
 			<param-value>false</param-value>
 		</init-param>
+		<!-- 
+		<init-param>
+			<param-name>org.atmosphere.interceptor.HeartbeatInterceptor.heartbeatFrequencyInSeconds</param-name>
+			<param-value>10</param-value>
+		</init-param>
+		<init-param>
+			<param-name>org.atmosphere.cpr.AbstractReflectorAtmosphereHandler.twoStepsWrite</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>org.atmosphere.cache.UUIDBroadcasterCache.invalidateCacheInterval</param-name>
+			<param-value>86400</param-value>
+		</init-param>
+		<init-param>
+			<param-name>org.atmosphere.cache.UUIDBroadcasterCache.clientIdleTime</param-name>
+			<param-value>86400</param-value>
+		</init-param>
+		 -->
+
 		<load-on-startup>0</load-on-startup>
 		<async-supported>true</async-supported>
 	</servlet>
