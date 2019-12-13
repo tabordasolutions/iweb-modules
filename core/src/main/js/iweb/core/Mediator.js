@@ -50,8 +50,6 @@ define(["ext", "jquery", "atmosphere", "./EventManager", "./CookieManager"],
  
     var message = "/mediator";
  
-    var messageQueue = [];
- 
     var topics = []; //maintain a list of topics for reinitialization
  
     var initiated = false;
@@ -60,9 +58,8 @@ define(["ext", "jquery", "atmosphere", "./EventManager", "./CookieManager"],
  
     var cookies = []; //List of cookies to be added to a request/post. Defined in the core.properties file
 
-    var ls = window.localStorage;
-
-    var lsArray = [];
+    var featureCache = new Map();
+    var chatCache = new Map();
  
     function Mediator() {}
     function Logger() {}
@@ -104,11 +101,6 @@ define(["ext", "jquery", "atmosphere", "./EventManager", "./CookieManager"],
  
         request.onError = function(error){
             logger.log(" Mediator onError called ");
- //          if (error.hasOwnProperty('messages') && (error.messages.length > 0)) {
- //               logger.log(" Mediator onError message being cached");
- //               messageQueue.push(message);
- //           }
-
         };
  
         request.onClose = function(error){
@@ -124,7 +116,6 @@ define(["ext", "jquery", "atmosphere", "./EventManager", "./CookieManager"],
  
         //Adding handler for onClientTimeout to fix 10/1/2019 field test issue
         request.onClientTimeout = function(message){
-            messageQueue.push(message);
             logger.log(" Mediator onClientTimeout Will initiate reconnection after reconnectionInterval...");
     		setTimeout(function(){
       			 ws = socket.subscribe(request);
@@ -148,19 +139,21 @@ define(["ext", "jquery", "atmosphere", "./EventManager", "./CookieManager"],
             var responseBody = response.responseBody; //JSON string
             var message = atmosphere.util.parseJSON(responseBody);
             if (message.data != null) {//Check to see if there is data
-                if(message.responseType == "json"){
+                if (message.responseType == "json"){
                     try{
                         message.data = JSON.parse(message.data);
-                    }catch(e){} //JS Logging?
-                }
-                if (message.eventName.startsWith('iweb.NICS.collabroom.') &&
-                		message.eventName.endsWith('.chat')) {
-                    try{
-            			logger.log((new Date()).toLocaleString() 
-            					+ " Mediator onResponse event " + message.eventName 
-            					+ " with data: " + JSON.stringify(message.data));
-                    }catch(e){} //JS Logging?
-                	
+                        if (message.data.message == 'OK') {
+                			logger.log(" Mediator onResponse event " + message.eventName 
+                					+ " with data: " + JSON.stringify(message.data));
+                        	
+                    		if (message.eventName.indexOf('nics.collabroom.feature.') >= 0) {
+                    			_mediator.deleteFeatureCache(message);
+                    		}
+                    		if (message.eventName.indexOf('chat.proxy.') >= 0) {
+                    			_mediator.deleteChatCache(message);
+                    		}
+                        }
+                    } catch(e){} //JS Logging?
                 }
                 EventManager.fireEvent(message.eventName, message.data);
             }else if(message.errorMessage){
@@ -236,41 +229,21 @@ define(["ext", "jquery", "atmosphere", "./EventManager", "./CookieManager"],
     	logger.log(" Mediator onReconnect prototype called with  socketConnected " + socketConnected); 
     }
     
-    Mediator.prototype.onReopen = function(){
+    Mediator.prototype.onReopen = function() {
         logger.log(" Mediator onReopen prototype called with  socketConnected " + socketConnected);
-        if(socketConnected){
-            //check messageQueue has all the message from localStorage
-        	logger.log(' Mediator Before find Delta:: messageQueue:: length is::'+ messageQueue.length + JSON.stringify(messageQueue));
-            var deltaCache = this.findDelta(JSON.parse(ls.getItem('lsData')), messageQueue);
-        	logger.log(' Mediator deltaCache::' + JSON.stringify(deltaCache));
-            messageQueue.push.apply(messageQueue,deltaCache);           
-            this.clearLocalStorage();//clear local storage after delta is added to the offline cache
-            logger.log(' Mediator Cleared local storage after adding delta');
-            
-            var completed = true;
-            
-			for(var i=0; i<messageQueue.length; i++){
-				logger.log(" Mediator processing message from cache "+JSON.stringify(messageQueue[i]));
-	            if (socketConnected) {
-		            ws.push(JSON.stringify(messageQueue[i]));
-	            } else {
-					completed = false;
-					break;
-	            }
-//				if(!this.sendMessage(messageQueue[i])){
-//					logger.log(" Mediator sopped processing message from cache "+JSON.stringify(messageQueue[i]));
-//					completed = false;
-//					break;
-//				}
-			}
-			if(completed){
-				logger.log(" Mediator emptying cache ");
-				messageQueue = []; //reset
-			}else{
-				logger.log(" Mediator splicing cache ");
-				messageQueue.splice(0,i); //remove successfully sent messages
-			}
- 
+        featureCache.forEach(function(value, key) {
+            if (socketConnected) {
+        		logger.log(" Mediator processing message from featureCache "+JSON.stringify(value));
+                ws.push(JSON.stringify(value));
+            }
+        });
+        chatCache.forEach(function(value, key) {
+            if (socketConnected) {
+        		logger.log(" Mediator processing message from chatCache "+JSON.stringify(value));
+                ws.push(JSON.stringify(value));
+            }
+        });
+        if (socketConnected) {
             for(var j=0; j<topics.length; j++){
                 this.subscribe(topics[j]);
             }
@@ -280,46 +253,6 @@ define(["ext", "jquery", "atmosphere", "./EventManager", "./CookieManager"],
         }
     };
 
-    Mediator.prototype.clearLocalStorage = function () {
-        lsArray = [];
-        ls.clear(); 
-    }    
-
-    Mediator.prototype.findDelta = function (lstg, mq)  {      
-        var delta = [];
-        var mapLstg = this.convertArrayToMap(lstg);
-        logger.log('converted local storage map::mapLstg:: length:'+ Object.keys(mapLstg).length +':::' + JSON.stringify(mapLstg));
-        var mapMq = this.convertArrayToMap(mq); 
-        logger.log('converted messageQueue map::mapMq:: length:' + Object.keys(mapLstg).length+':::' + JSON.stringify(mapMq));
-
-        for (var id in mapLstg) {
-            if (!mapMq.hasOwnProperty(id)) {
-                logger.log('Found one delta with id:' + id +' and value:'+mapLstg[id]);
-                delta.push(mapLstg[id]);
-            } 
-        }  
-        return delta;
-    }
-
-    Mediator.prototype.convertArrayToMap = function (array) {
-        var map = {};
-        if (array != null) {
-            for (var i=0; i < array.length; i++) {
-                if(array[i].type == 'post' || array[i].type == 'put'){
-                   if(JSON.parse(array[i].payload).seqtime != null){//only markers are allowed
-                    parsedKey = JSON.parse(array[i].payload).seqtime;
-                    console.log('parsedKey::' + parsedKey);
-                    map[ parsedKey] = array[i];  
-                }                              
-             }else{
-               //msg's with no payload 
-             }                    
-                    
-           }
-        }
-        return map;
-    }
- 
     Mediator.prototype.onDisconnect = function(){
         EventManager.fireEvent("iweb.connection.disconnected");
     };
@@ -339,64 +272,57 @@ define(["ext", "jquery", "atmosphere", "./EventManager", "./CookieManager"],
         return this.restApiUrl;
     };
  
+    Mediator.prototype.updateFeatureCache = function(message) {
+		featureCache.set(message.eventName, message);
+    }
+    
+    Mediator.prototype.deleteFeatureCache = function(message) {
+		featureCache.delete(message.eventName);
+    }
+    
+    Mediator.prototype.updateChatCache = function(message) {
+    	if (message.payload != undefined) {
+    		var payload = JSON.parse(message.payload);
+            if (payload.chatid != undefined) {
+                chatCache.forEach(function(value, key) {
+            		var mapPayload = JSON.parse(value.payload);
+            		if (mapPayload.chatid == payload.chatid) {
+            			chatCache.delete(key);
+            		}
+                });
+                chatCache.set(message.eventName, message);
+            }
+    	}
+    }
+ 
+    Mediator.prototype.deleteChatCache = function(message) {
+		chatCache.delete(message.eventName);
+    }
+    
     //Send Message on Rabbit Bus
     Mediator.prototype.sendMessage = function(message) {
-    	var chatidOfMessage = undefined;
+        logger.logAlways(" Mediator sendMessage " + JSON.stringify(message) + " with  socketConnected " + socketConnected);
     	if (message.eventName != undefined) {
-    		if ((message.eventName.indexOf('feature.') >= 0) || (message.eventName.indexOf('chat') >= 0)) {
-                logger.logAlways(" Mediator sendMessage " + JSON.stringify(message) + " with  socketConnected " + socketConnected);
-            	if (message.payload != undefined) {
-            		var payload = JSON.parse(message.payload);
-                    if (payload.chatid == undefined) {
-                        this.cacheMessage(message);
-                    } else {
-                    	chatidOfMessage = payload.chatid;
-                    }
-            	}
+    		if (message.eventName.indexOf('nics.collabroom.feature.') >= 0) {
+    			this.updateFeatureCache(message);
+    		}
+    		if (message.eventName.indexOf('chat.proxy.') >= 0) {
+    			this.updateChatCache(message);
     		}
     	}
         if (socketConnected) {
-            logger.log(" Mediator message " + JSON.stringify(message) + " is on the wire");
             ws.push(JSON.stringify(message));
-             // clear array as msg's pushed to websocket
-            lsArray = [];
-            logger.log('<-- Cleared lsArray after ws.push -->');
             return true;
-        }else{
-        	if (message.payload != undefined) {
-                logger.log(" Mediator message payload " + message.payload );
-                if (chatidOfMessage == undefined) {
-                	logger.log(" Mediator non-chat message " + JSON.stringify(message) + " added to cache");
-                    messageQueue.push(message);
-                } else {
-                	logger.log(" Mediator chat message " + JSON.stringify(message) + " search on cache");
-                    var index = messageQueue.findIndex( 
-                    					function(mqElement) { return JSON.parse(mqElement.payload).chatid == chatidOfMessage});
-                    if (index != -1) {
-                    	logger.log(" Mediator chat message " + JSON.stringify(message) + " in cache, removing");
-                        var removedItem = messageQueue.splice(index, 1);
-                    }
-                    logger.log(" Mediator chat message " + JSON.stringify(message) + " added to cache");
-                    messageQueue.push(message);
-                }
-        	}
         }
         return false;
     };
 
-    Mediator.prototype.cacheMessage = function(message){
-        lsArray.push(message);
-        ls.setItem('lsData',JSON.stringify(lsArray));
-        logger.log('localStorage::' + ls.getItem('lsData'));
-    }
- 
     Mediator.prototype.publishMessage = function(topic, message){
         msg = {
             type: "publish",
             message: JSON.stringify(message),
             topic: topic
         };
-//        this.cacheMessage(msg);
         this.sendMessage(msg);
         
     };
@@ -405,7 +331,6 @@ define(["ext", "jquery", "atmosphere", "./EventManager", "./CookieManager"],
     Mediator.prototype.subscribe = function(topic) {
         if(jQuery.inArray(topic, topics) == -1) { topics.push(topic); }
         msg = { type: "subscribe", topic: topic };
-//        this.cacheMessage(msg);
         this.sendMessage(msg);
     };
  
@@ -414,7 +339,6 @@ define(["ext", "jquery", "atmosphere", "./EventManager", "./CookieManager"],
         var index = jQuery.inArray(topic, topics);
         if(index != -1){ topics.splice(index,1); }
         msg = { type: "unsubscribe", topic: topic };
-//        this.cacheMessage(msg);
         this.sendMessage(msg);
     };
  
@@ -434,7 +358,6 @@ define(["ext", "jquery", "atmosphere", "./EventManager", "./CookieManager"],
             responseType: responseType,
             cookieKeys: CookieManager.getCookies(url)
         };
-//        this.cacheMessage(msg);
         this.sendMessage(msg);                 
     };
  
@@ -456,7 +379,6 @@ define(["ext", "jquery", "atmosphere", "./EventManager", "./CookieManager"],
             responseType: responseType,
             cookieKeys: CookieManager.getCookies(url)
         };
-//        this.cacheMessage(msg);
         this.sendMessage(msg);        
     };
  
@@ -478,7 +400,6 @@ define(["ext", "jquery", "atmosphere", "./EventManager", "./CookieManager"],
             responseType: responseType,
             cookieKeys: CookieManager.getCookies(url)
         };
-//       this.cacheMessage(msg);
         this.sendMessage(msg);
     };
  
@@ -498,7 +419,6 @@ define(["ext", "jquery", "atmosphere", "./EventManager", "./CookieManager"],
             responseType: responseType,
             cookieKeys: CookieManager.getCookies(url)
         };
-//        this.cacheMessage(msg);
         this.sendMessage(msg);        
     };
  
