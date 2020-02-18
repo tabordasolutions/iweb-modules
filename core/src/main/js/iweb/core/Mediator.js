@@ -204,7 +204,7 @@ define(["ext", "jquery", "atmosphere", "./EventManager", "./CookieManager"],
         var file = "login/images/scout_logo.png";
         var randomNum = Math.round(Math.random() * 10000);
      
-        xhr.timeout = 2000; // time in milliseconds
+        xhr.timeout = 5000; // time in milliseconds
         xhr.open('HEAD', file + "?rand=" + randomNum, true);
         xhr.send();
          
