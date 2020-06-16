@@ -45,6 +45,6 @@ define(['ext', 'iweb/CoreModule',"iweb/modules/core-view/ConnectionController"],
         frame: false,
         shadow: false,
         hidden: true,
-        html: '<div><div id="cDisconnectHeader" style="display:none;">Internet Connection Lost</div></div>'
+        html: '<div><div id="cDisconnectHeader" style="display:none;"><img src="img/core-view/no-internet-warning.png"/>  Internet Connection Lost</div></div>'
     });
 });
