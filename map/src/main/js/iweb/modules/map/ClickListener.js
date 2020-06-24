@@ -37,6 +37,8 @@ define(['ext', 'iweb/CoreModule', "./FeatureDetailUtils"], function(Ext, Core, F
 
 			this.container = new Ext.window.Window({
 				title: 'Feature Details',
+				height: 400,
+				scrollable: true,
 				width: 400,
 				componentCls:'form-feature-detail',
 				renderTo: "cMainComponent-body",
